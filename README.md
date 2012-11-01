@@ -1496,6 +1496,7 @@ patch them.)
 `ruby -s` for trivial command line options.
 * Code in a functional way, avoiding mutation when that makes sense.
 * Do not mutate arguments unless that is the purpose of the method.
+* Do not [program defensively](http://www.erlang.se/doc/programming_rules.shtml#HDR11).
 * Avoid more than three levels of block nesting.
 * Be consistent. In an ideal world, be consistent with these guidelines.
 * Use common sense.
