@@ -1500,6 +1500,7 @@ patch them.)
 * Avoid more than three levels of block nesting.
 * Keep the code simple.
 * Keep the code clean.
+* Don't overdesign or underdesign. The design should be balanced (均衡).
 * Be consistent. In an ideal world, be consistent with these guidelines.
 * Use common sense.
 
