@@ -79,6 +79,9 @@ You can generate a PDF or an HTML copy of this guide using
 > -- Jerry Coffin (on indentation)
 
 * Use `UTF-8` as the source file encoding.
+
+  > MISSING RATIONALE
+
 * Use two **spaces** per indentation level. No hard tabs.
 
     ```Ruby
@@ -93,6 +96,8 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
+  > MISSING RATIONALE
+
 * Use Unix-style line endings. (*BSD/Solaris/Linux/OSX users are covered by default,
   Windows users have to be extra careful.)
     * If you're using Git you might want to add the following
@@ -100,6 +105,8 @@ You can generate a PDF or an HTML copy of this guide using
     endings creeping in:
 
         $ git config --global core.autocrlf true
+
+  > MISSING RATIONALE
 
 * Use spaces around operators, after commas, colons and semicolons, around `{`
   and before `}`. Whitespace might be (mostly) irrelevant to the Ruby
@@ -123,12 +130,16 @@ You can generate a PDF or an HTML copy of this guide using
     e = M * c**2
     ```
 
+  > MISSING RATIONALE
+
 * No spaces after `(`, `[` or before `]`, `)`.
 
     ```Ruby
     some(arg).other
     [1, 2, 3].length
     ```
+
+  > MISSING RATIONALE
 
 * Indent `when` as deep as `case`. I know that many would disagree
   with this one, but it's the style established in both the "The Ruby
@@ -156,6 +167,8 @@ You can generate a PDF or an HTML copy of this guide using
            end
     ```
 
+  > MISSING RATIONALE
+
 * Use empty lines between `def`s and to break up a method into logical
   paragraphs.
 
@@ -172,6 +185,8 @@ You can generate a PDF or an HTML copy of this guide using
       result
     end
     ```
+
+  > MISSING RATIONALE
 
 * Align the parameters of a method call if they span over multiple lines.
 
@@ -208,10 +223,20 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
+  > MISSING RATIONALE
+
 * Use RDoc and its conventions for API documentation.  Don't put an
   empty line between the comment block and the `def`.
+
+  > MISSING RATIONALE
+
 * Keep lines fewer than 80 characters.
+
+  > MISSING RATIONALE
+
 * Avoid trailing whitespace.
+
+  > MISSING RATIONALE
 
 ## Syntax
 
@@ -227,6 +252,8 @@ You can generate a PDF or an HTML copy of this guide using
        # body omitted
      end
      ```
+
+  > MISSING RATIONALE
 
 * Never use `for`, unless you know exactly why. Most of the time iterators
   should be used instead. `for` is implemented in terms of `each` (so
@@ -246,6 +273,8 @@ You can generate a PDF or an HTML copy of this guide using
     arr.each { |elem| puts elem }
     ```
 
+  > MISSING RATIONALE
+
 * Never use `then` for multi-line `if/unless`.
 
     ```Ruby
@@ -260,6 +289,8 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
+  > MISSING RATIONALE
+
 * Favor the ternary operator(`?:`) over `if/then/else/end` constructs.
   It's more common and obviously more concise.
 
@@ -270,6 +301,8 @@ You can generate a PDF or an HTML copy of this guide using
     # good
     result = some_condition ? something : something_else
     ```
+
+  > MISSING RATIONALE
 
 * Use one expression per branch in a ternary operator. This
   also means that ternary operators must not be nested. Prefer
@@ -287,6 +320,8 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
+  > MISSING RATIONALE
+
 * Never use `if x: ...` - it is removed in Ruby 1.9. Use
   the ternary operator instead.
 
@@ -298,12 +333,20 @@ You can generate a PDF or an HTML copy of this guide using
     result = some_condition ? something : something_else
     ```
 
+  > MISSING RATIONALE
+
 * Never use `if x; ...`. Use the ternary operator instead.
+
+  > MISSING RATIONALE
 
 * Use `when x then ...` for one-line cases. The alternative syntax
   `when x: ...` is removed in Ruby 1.9.
 
+  > MISSING RATIONALE
+
 * Never use `when x; ...`. See the previous rule.
+
+  > MISSING RATIONALE
 
 * Use `&&/||` for boolean expressions, `and/or` for control flow.  (Rule
   of thumb: If you have to use outer parentheses, you are using the
@@ -319,7 +362,11 @@ You can generate a PDF or an HTML copy of this guide using
     document.saved? or document.save!
     ```
 
+  > MISSING RATIONALE
+
 * Avoid multi-line `?:` (the ternary operator); use `if/unless` instead.
+
+  > MISSING RATIONALE
 
 * Favor modifier `if/unless` usage when you have a single-line
   body. Another good alternative is the usage of control flow `and/or`.
@@ -337,6 +384,8 @@ You can generate a PDF or an HTML copy of this guide using
     some_condition and do_something
     ```
 
+  > MISSING RATIONALE
+
 * Favor `unless` over `if` for negative conditions (or control
   flow `or`).
 
@@ -350,6 +399,8 @@ You can generate a PDF or an HTML copy of this guide using
     # another good option
     some_condition or do_something
     ```
+
+  > MISSING RATIONALE
 
 * Never use `unless` with `else`. Rewrite these with the positive case first.
 
@@ -368,6 +419,8 @@ You can generate a PDF or an HTML copy of this guide using
       puts 'failure'
     end
     ```
+
+  > MISSING RATIONALE
 
 * Don't use parentheses around the condition of an `if/unless/while`,
   unless the condition contains an assignment (see "Using the return
@@ -390,6 +443,8 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
+  > MISSING RATIONALE
+
 * Favor modifier `while/until` usage when you have a single-line
   body.
 
@@ -403,6 +458,8 @@ You can generate a PDF or an HTML copy of this guide using
     do_something while some_condition
     ```
 
+  > MISSING RATIONALE
+
 * Favor `until` over `while` for negative conditions.
 
     ```Ruby
@@ -412,6 +469,8 @@ You can generate a PDF or an HTML copy of this guide using
     # good
     do_something until some_condition
     ```
+
+  > MISSING RATIONALE
 
 * Omit parentheses around parameters for methods that are part of an
   internal DSL (e.g. Rake, Rails, RSpec), methods that are with
@@ -434,6 +493,8 @@ You can generate a PDF or an HTML copy of this guide using
     x = Math.sin(y)
     array.delete(e)
     ```
+
+  > MISSING RATIONALE
 
 * Prefer `{...}` over `do...end` for single-line blocks.  Avoid using
   `{...}` for multi-line blocks (multiline chaining is always
@@ -465,6 +526,8 @@ You can generate a PDF or an HTML copy of this guide using
     ask themselves - is this code really readable and can't the blocks contents be extracted into
     nifty methods?
 
+  > MISSING RATIONALE
+
 * Avoid `return` where not required for flow of control.
 
     ```Ruby
@@ -478,6 +541,8 @@ You can generate a PDF or an HTML copy of this guide using
       some_arr.size
     end
     ```
+
+  > MISSING RATIONALE
 
 * Avoid `self` where not required. (It is only required when calling a self write accessor.)
 
@@ -500,6 +565,8 @@ You can generate a PDF or an HTML copy of this guide using
       status == :verified
     end
     ```
+
+  > MISSING RATIONALE
 
 * As a corollary, avoid shadowing methods with local variables unless they are both equivalent.
 
@@ -529,6 +596,8 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
+  > MISSING RATIONALE
+
 * Use spaces around the `=` operator when assigning default values to method parameters:
 
     ```Ruby
@@ -546,6 +615,8 @@ You can generate a PDF or an HTML copy of this guide using
     While several Ruby books suggest the first style, the second is much more prominent
     in practice (and arguably a bit more readable).
 
+  > MISSING RATIONALE
+
 * Avoid line continuation (\\) where not required. In practice, avoid using
   line continuations at all.
 
@@ -558,6 +629,8 @@ You can generate a PDF or an HTML copy of this guide using
     result = 1 \
              - 2
     ```
+
+  > MISSING RATIONALE
 
 * Using the return value of `=` (an assignment) is ok, but surround the
   assignment with parentheses.
@@ -573,12 +646,16 @@ You can generate a PDF or an HTML copy of this guide using
     if (v = self.next_value) == 'hello' ...
     ```
 
+  > MISSING RATIONALE
+
 * Use `||=` freely to initialize variables.
 
     ```Ruby
     # set name to Bozhidar, only if it's nil or false
     name ||= 'Bozhidar'
     ```
+
+  > MISSING RATIONALE
 
 * Don't use `||=` to initialize boolean variables. (Consider what
 would happen if the current value happened to be `false`.)
@@ -591,9 +668,13 @@ would happen if the current value happened to be `false`.)
     enabled = true if enabled.nil?
     ```
 
+  > MISSING RATIONALE
+
 * Avoid using Perl-style special variables (like `$0-9`, `$``,
   etc. ). They are quite cryptic and their use in anything but
   one-liner scripts is discouraged.
+
+  > MISSING RATIONALE
 
 * Never put a space between a method name and the opening parenthesis.
 
@@ -605,12 +686,18 @@ would happen if the current value happened to be `false`.)
     f(3 + 2) + 1
     ```
 
+  > MISSING RATIONALE
+
 * If the first argument to a method begins with an open parenthesis,
   always use parentheses in the method invocation. For example, write
 `f((3 + 2) + 1)`.
 
+  > MISSING RATIONALE
+
 * Always run the Ruby interpreter with the `-w` option so it will warn
 you if you forget either of the rules above!
+
+  > MISSING RATIONALE
 
 * The new hash literal syntax is preferred in Ruby 1.9 when your hash keys are symbols.
 
@@ -621,6 +708,8 @@ you if you forget either of the rules above!
     # good
     hash = { one: 1, two: 2 }
     ```
+
+  > MISSING RATIONALE
 
 * The new lambda literal syntax is preferred in Ruby 1.9.
 
@@ -634,6 +723,8 @@ you if you forget either of the rules above!
     lambda.(1, 2)
     ```
 
+  > MISSING RATIONALE
+
 * Use `_` for unused block parameters.
 
     ```Ruby
@@ -644,6 +735,8 @@ you if you forget either of the rules above!
     result = hash.map { |_, v| v + 1 }
     ```
 
+  > MISSING RATIONALE
+
 ## Naming
 
 > The only real difficulties in programming are cache invalidation and
@@ -651,12 +744,24 @@ you if you forget either of the rules above!
 > -- Phil Karlton
 
 * Use `snake_case` for methods and variables.
+
+  > MISSING RATIONALE
+
 * Use `CamelCase` for classes and modules.  (Keep acronyms like HTTP,
   RFC, XML uppercase.)
+
+  > MISSING RATIONALE
+
 * Use `SCREAMING_SNAKE_CASE` for other constants.
+
+  > MISSING RATIONALE
+
 * The names of predicate methods (methods that return a boolean value)
   should end in a question mark.
   (i.e. `Array#empty?`).
+
+  > MISSING RATIONALE
+
 * The names of potentially "dangerous" methods (i.e. methods that modify `self` or the
   arguments, `exit!` (doesn't run the finalizers like `exit` does), etc.) should end with an exclamation mark if
   there exists a safe version of that *dangerous* method.
@@ -684,6 +789,8 @@ you if you forget either of the rules above!
     end
     ```
 
+  > MISSING RATIONALE
+
 * Define the non-bang (safe) method in terms of the bang (dangerous)
   one if possible.
 
@@ -705,8 +812,13 @@ you if you forget either of the rules above!
     end
     ```
 
+  > MISSING RATIONALE
+
 * When using `reduce` with short blocks, name the arguments `|a, e|`
   (accumulator, element).
+
+  > MISSING RATIONALE
+
 * When defining binary operators, name the argument `other`.
 
     ```Ruby
@@ -715,6 +827,8 @@ you if you forget either of the rules above!
     end
     ```
 
+  > MISSING RATIONALE
+
 * Prefer `map` over `collect`, `find` over `detect`, `select` over
   `find_all`, `reduce` over `inject` and `size` over `length`. This is
   not a hard requirement; if the use of the alias enhances
@@ -722,6 +836,8 @@ you if you forget either of the rules above!
   Smalltalk and are not common in other programming languages. The
   reason the use of `select` is encouraged over `find_all` is that it
   goes together nicely with `reject` and its name is pretty self-explanatory.
+
+  > MISSING RATIONALE
 
 ## Comments
 
@@ -732,8 +848,14 @@ you if you forget either of the rules above!
 > -- Steve McConnell
 
 * Write self-documenting code and ignore the rest of this section. Seriously!
+
+  > MISSING RATIONALE
+
 * Comments longer than a word are capitalized and use punctuation. Use [one
   space](http://en.wikipedia.org/wiki/Sentence_spacing) after periods.
+
+  > MISSING RATIONALE
+
 * Avoid superfluous comments.
 
     ```Ruby
@@ -741,8 +863,12 @@ you if you forget either of the rules above!
     counter += 1 # increments counter by one
     ```
 
+  > MISSING RATIONALE
+
 * Keep existing comments up-to-date. An outdated is worse than no comment
 at all.
+
+  > MISSING RATIONALE
 
 > Good code is like a good joke - it needs no explanation. <br/>
 > -- Russ Olsen
@@ -753,12 +879,20 @@ at all.
 > Do or do not - there is no try. <br/>
 > -- Yoda
 
+  > MISSING RATIONALE
+
 ## Annotations
 
 * Annotations should usually be written on the line immediately above
   the relevant code.
+
+  > MISSING RATIONALE
+
 * The annotation keyword is followed by a colon and a space, then a note
   describing the problem.
+
+  > MISSING RATIONALE
+
 * If multiple lines are required to describe the problem, subsequent
   lines should be indented two spaces after the `#`.
 
@@ -770,6 +904,8 @@ at all.
     end
     ```
 
+  > MISSING RATIONALE
+
 * In cases where the problem is so obvious that any documentation would
   be redundant, annotations may be left at the end of the offending line
   with no note. This usage should be the exception and not the rule.
@@ -780,26 +916,51 @@ at all.
     end
     ```
 
+  > MISSING RATIONALE
+
 * Use `TODO` to note missing features or functionality that should be
   added at a later date.
+
+  > MISSING RATIONALE
+
 * Use `FIXME` to note broken code that needs to be fixed.
+
+  > MISSING RATIONALE
+
 * Use `OPTIMIZE` to note slow or inefficient code that may cause
   performance problems.
+
+  > MISSING RATIONALE
+
 * Use `HACK` to note code smells where questionable coding practices
   were used and should be refactored away.
+
+  > MISSING RATIONALE
+
 * Use `REVIEW` to note anything that should be looked at to confirm it
   is working as intended. For example: `REVIEW: Are we sure this is how the
   client does X currently?`
+
+  > MISSING RATIONALE
+
 * Use other custom annotation keywords if it feels appropriate, but be
   sure to document them in your project's `README` or similar.
+
+  > MISSING RATIONALE
 
 ## Classes
 
 * When designing class hierarchies make sure that they conform to the
   [Liskov Substitution Principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle).
+
+  > MISSING RATIONALE
+
 * Try to make your classes as
   [SOLID](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design\))
   as possible.
+
+  > MISSING RATIONALE
+
 * Always supply a proper `to_s` method for classes that represent
   domain objects.
 
@@ -817,6 +978,8 @@ at all.
       end
     end
     ```
+
+  > MISSING RATIONALE
 
 * Use the `attr` family of functions to define trivial accessors or
 mutators.
@@ -848,6 +1011,9 @@ mutators.
       end
     end
     ```
+
+  > MISSING RATIONALE
+
 * Consider using `Struct.new`, which defines the trivial accessors,
 constructor and comparison operators for you.
 
@@ -867,6 +1033,8 @@ constructor and comparison operators for you.
     end
     ````
 
+  > MISSING RATIONALE
+
 * Consider adding factory methods to provide additional sensible ways
 to create instances of a particular class.
 
@@ -877,6 +1045,8 @@ to create instances of a particular class.
       end
     end
     ```
+
+  > MISSING RATIONALE
 
 * Prefer [duck-typing](http://en.wikipedia.org/wiki/Duck_typing) over inheritance.
 
@@ -916,6 +1086,8 @@ to create instances of a particular class.
     end
     ```
 
+  > MISSING RATIONALE
+
 * Avoid the usage of class (`@@`) variables due to their "nasty" behavior
 in inheritance.
 
@@ -939,10 +1111,15 @@ in inheritance.
     class variable. Class instance variables should usually be preferred
     over class variables.
 
+  > MISSING RATIONALE
+
 * Assign proper visibility levels to methods (`private`, `protected`)
 in accordance with their intended usage. Don't go off leaving
 everything `public` (which is the default). After all we're coding
 in *Ruby* now, not in *Python*.
+
+  > MISSING RATIONALE
+
 * Indent the `public`, `protected`, and `private` methods as much the
   method definitions they apply to. Leave one blank line above them.
 
@@ -958,6 +1135,8 @@ in *Ruby* now, not in *Python*.
       end
     end
     ```
+
+  > MISSING RATIONALE
 
 * Use `def self.method` to define singleton methods. This makes the code
   easier to refactor since the class name is not repeated.
@@ -988,6 +1167,8 @@ in *Ruby* now, not in *Python*.
     end
     ```
 
+  > MISSING RATIONALE
+
 ## Exceptions
 
 * Signal exceptions using the `fail` keyword. Use `raise` only when
@@ -1000,6 +1181,8 @@ in *Ruby* now, not in *Python*.
       raise if error.message != 'Oops'
     end
     ```
+
+  > MISSING RATIONALE
 
 * Never return from an `ensure` block. If you explicitly return from a
   method inside an `ensure` block, the return will take precedence over
@@ -1016,6 +1199,8 @@ in *Ruby* now, not in *Python*.
       end
     end
     ```
+
+  > MISSING RATIONALE
 
 * Use *implicit begin blocks* when possible.
 
@@ -1036,6 +1221,8 @@ in *Ruby* now, not in *Python*.
       # failure handling goes here
     end
     ```
+
+  > MISSING RATIONALE
 
 * Mitigate the proliferation of `begin` blocks by using
   *contingency methods* (a term coined by Avdi Grimm).
@@ -1066,6 +1253,8 @@ in *Ruby* now, not in *Python*.
     with_io_error_handling { something_else_that_might_fail }
     ```
 
+  > MISSING RATIONALE
+
 * Don't suppress exceptions.
 
     ```Ruby
@@ -1079,6 +1268,8 @@ in *Ruby* now, not in *Python*.
     # bad
     do_something rescue nil
     ```
+
+  > MISSING RATIONALE
 
 * Don't use exceptions for flow of control.
 
@@ -1097,6 +1288,8 @@ in *Ruby* now, not in *Python*.
       n / d
     end
     ```
+
+  > MISSING RATIONALE
 
 * Avoid rescuing the `Exception` class.  This will trap signals and calls to
   `exit`, requiring you to `kill -9` the process.
@@ -1129,6 +1322,8 @@ in *Ruby* now, not in *Python*.
 
     ```
 
+  > MISSING RATIONALE
+
 * Put more specific exceptions higher up the rescue chain, otherwise
   they'll never be rescued from.
 
@@ -1152,6 +1347,8 @@ in *Ruby* now, not in *Python*.
     end
     ```
 
+  > MISSING RATIONALE
+
 * Release external resources obtained by your program in an ensure
 block.
 
@@ -1166,8 +1363,12 @@ block.
     end
     ```
 
+  > MISSING RATIONALE
+
 * Favor the use of exceptions for the standard library over
 introducing new exception classes.
+
+  > MISSING RATIONALE
 
 ## Collections
 
@@ -1184,6 +1385,8 @@ pass parameters to their constructors, that is).
     hash = {}
     ```
 
+  > MISSING RATIONALE
+
 * Prefer `%w` to the literal array syntax when you need an array of
 strings.
 
@@ -1195,6 +1398,8 @@ strings.
     STATES = %w(draft open closed)
     ```
 
+  > MISSING RATIONALE
+
 * Avoid the creation of huge gaps in arrays.
 
     ```Ruby
@@ -1202,10 +1407,15 @@ strings.
     arr[100] = 1 # now you have an array with lots of nils
     ```
 
+  > MISSING RATIONALE
+
 * Use `Set` instead of `Array` when dealing with unique elements. `Set`
   implements a collection of unordered values with no duplicates. This
   is a hybrid of `Array`'s intuitive inter-operation facilities and
   `Hash`'s fast lookup.
+
+  > MISSING RATIONALE
+
 * Prefer symbols instead of strings as hash keys.
 
     ```Ruby
@@ -1216,7 +1426,12 @@ strings.
     hash = { one: 1, two: 2, three: 3 }
     ```
 
+  > MISSING RATIONALE
+
 * Avoid the use of mutable objects as hash keys.
+
+  > MISSING RATIONALE
+
 * The new hash literal syntax is preferred in Ruby 1.9 when your hash keys are symbols.
 
     ```Ruby
@@ -1227,8 +1442,15 @@ strings.
     hash = { one: 1, two: 2, three: 3 }
     ```
 
+  > MISSING RATIONALE
+
 * Rely on the fact that hashes in Ruby 1.9 are ordered.
+
+  > MISSING RATIONALE
+
 * Never modify a collection while traversing it.
+
+  > MISSING RATIONALE
 
 ## Strings
 
@@ -1242,12 +1464,16 @@ strings.
     email_with_name = "#{user.name} <#{user.email}>"
     ```
 
+  > MISSING RATIONALE
+
 * Consider padding string interpolation code with space. It more clearly sets the
   code apart from the string.
 
     ```Ruby
     "#{ user.last_name }, #{ user.first_name }"
     ```
+
+  > MISSING RATIONALE
 
 * Prefer single-quoted strings when you don't need string interpolation or
   special symbols such as `\t`, `\n`, `'`, etc.
@@ -1259,6 +1485,8 @@ strings.
     # good
     name = 'Bozhidar'
     ```
+
+  > MISSING RATIONALE
 
 * Don't use `{}` around instance variables being interpolated into a
   string.
@@ -1284,6 +1512,8 @@ strings.
     end
     ```
 
+  > MISSING RATIONALE
+
 * Avoid using `String#+` when you need to construct large data chunks.
   Instead, use `String#<<`. Concatenation mutates the string instance in-place
   and is always faster than `String#+`, which creates a bunch of new string objects.
@@ -1298,10 +1528,15 @@ strings.
     end
     ```
 
+  > MISSING RATIONALE
+
 ## Regular Expressions
 
 * Don't use regular expressions if you just need plain text search in string:
   `string['text']`
+
+  > MISSING RATIONALE
+
 * For simple constructions you can use regexp directly through string index.
 
     ```Ruby
@@ -1310,12 +1545,16 @@ strings.
     string[/text (grp)/, 1] = 'replace'  # string => 'text replace'
     ```
 
+  > MISSING RATIONALE
+
 * Use non-capturing groups when you don't use captured result of parentheses.
 
     ```Ruby
     /(first|second)/   # bad
     /(?:first|second)/ # good
     ```
+
+  > MISSING RATIONALE
 
 * Avoid using $1-9 as it can be hard to track what they contain. Named groups
   can be used instead.
@@ -1332,8 +1571,12 @@ strings.
     process meaningful_var
     ```
 
+  > MISSING RATIONALE
+
 * Character classes have only few special characters you should care about:
   `^`, `-`, `\`, `]`, so don't escape `.` or brackets in `[]`.
+
+  > MISSING RATIONALE
 
 * Be careful with `^` and `$` as they match start/end of line, not string endings.
   If you want to match the whole string use: `\A` and `\z` (not to be
@@ -1344,6 +1587,8 @@ strings.
     string[/^username$/]   # matches
     string[/\Ausername\z/] # don't match
     ```
+
+  > MISSING RATIONALE
 
 * Use `x` modifier for complex regexps. This makes them more readable and you
   can add some useful comments. Just be careful as spaces are ignored.
@@ -1358,7 +1603,11 @@ strings.
     }x
     ```
 
+  > MISSING RATIONALE
+
 * For complex replacements `sub`/`gsub` can be used with block or hash.
+
+  > MISSING RATIONALE
 
 ## Percent Literals
 
@@ -1367,6 +1616,8 @@ strings.
     ```Ruby
     STATES = %w(draft open closed)
     ```
+
+  > MISSING RATIONALE
 
 * Use `%()` for single-line strings which require both interpolation
   and embedded double-quotes. For multi-line strings, prefer heredocs.
@@ -1388,6 +1639,8 @@ strings.
     %(<tr><td class="name">#{name}</td>)
     ```
 
+  > MISSING RATIONALE
+
 * Use `%r` only for regular expressions matching *more than* one '/' character.
 
     ```Ruby
@@ -1402,16 +1655,26 @@ strings.
     %r(^/blog/2011/(.*)$)
     ```
 
+  > MISSING RATIONALE
+
 * Avoid `%q`, `%Q`, `%x`, `%s`, and `%W`.
 
+  > MISSING RATIONALE
+
 * Prefer `()` as delimiters for all `%` literals.
+
+  > MISSING RATIONALE
 
 ## Metaprogramming
 
 * Avoid needless metaprogramming.
 
+  > MISSING RATIONALE
+
 * Do not mess around in core classes when writing libraries. (Do not monkey
 patch them.)
+
+  > MISSING RATIONALE
 
 * The block form of `class_eval` is preferable to the string-interpolated form.
   - when you use the string-interpolated form, always supply `__FILE__` and `__LINE__`, so that your backtraces make sense:
@@ -1421,6 +1684,8 @@ patch them.)
     ```
 
   - `define_method` is preferable to `class_eval{ def ... }`
+
+  > MISSING RATIONALE
 
 * When using `class_eval` (or other `eval`) with string interpolation, add a comment block showing its appearance if interpolated (a practice I learned from the rails code):
 
@@ -1441,6 +1706,8 @@ patch them.)
       end
     end
     ```
+
+  > MISSING RATIONALE
 
 * avoid using `method_missing` for metaprogramming. Backtraces become messy; the behavior is not listed in `#methods`; misspelled method calls might silently work (`nukes.launch_state = false`). Consider using delegation, proxy, or `define_method` instead.  If you must, use `method_missing`,
   - be sure to [also define `respond_to_missing?`](http://blog.marc-andre.ca/2010/11/methodmissing-politely.html)
@@ -1470,14 +1737,31 @@ patch them.)
     # best of all, though, would to define_method as each findable attribute is declared
     ```
 
+  > MISSING RATIONALE
+
 ## Misc
 
 * Write `ruby -w` safe code.
+
+  > MISSING RATIONALE
+
 * Avoid hashes as optional parameters. Does the method do too much?
+
+  > MISSING RATIONALE
+
 * Avoid methods longer than 10 LOC (lines of code). Ideally, most methods will be shorter than
   5 LOC. Empty lines do not contribute to the relevant LOC.
+
+  > MISSING RATIONALE
+
 * Avoid parameter lists longer than three or four parameters.
+
+  > MISSING RATIONALE
+
 * If you really have to, add "global" methods to Kernel and make them private.
+
+  > MISSING RATIONALE
+
 * Use class instance variables instead of global variables.
 
     ```Ruby
@@ -1494,18 +1778,52 @@ patch them.)
     Foo.bar = 1
     ```
 
+  > MISSING RATIONALE
+
 * Avoid `alias` when `alias_method` will do.
+
+  > MISSING RATIONALE
+
 * Use `OptionParser` for parsing complex command line options and
 `ruby -s` for trivial command line options.
+
+  > MISSING RATIONALE
+
 * Code in a functional way, avoiding mutation when that makes sense.
+
+  > MISSING RATIONALE
+
 * Do not mutate arguments unless that is the purpose of the method.
+
+  > MISSING RATIONALE
+
 * Do not [program defensively](http://www.erlang.se/doc/programming_rules.shtml#HDR11).
+
+  > MISSING RATIONALE
+
 * Avoid more than three levels of block nesting.
+
+  > MISSING RATIONALE
+
 * Keep the code simple.
+
+  > MISSING RATIONALE
+
 * Keep the code clean.
+
+  > MISSING RATIONALE
+
 * Don't overdesign or underdesign. The design should be balanced (均衡).
+
+  > MISSING RATIONALE
+
 * Be consistent. In an ideal world, be consistent with these guidelines.
+
+  > MISSING RATIONALE
+
 * Use common sense.
+
+  > MISSING RATIONALE
 
 # Contributing
 
