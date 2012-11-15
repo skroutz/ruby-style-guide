@@ -465,16 +465,26 @@ You can generate a PDF or an HTML copy of this guide using
     ask themselves - is this code really readable and can't the blocks contents be extracted into
     nifty methods?
 
-* Avoid `return` where not required for flow of control.
+* Avoid `return` where not required for flow of control. Consider leaving a blank line before
+  the implicitly returned value of a method to make it more prominent.
 
     ```Ruby
-    # bad
+    # bad (no need to return explicitly)
     def some_method(some_arr)
+      # do some processing
       return some_arr.size
+    end
+
+    # bad (last value not prominent enough)
+    def some_method(some_arr)
+      # do some processing
+      some_arr.size
     end
 
     # good
     def some_method(some_arr)
+      # do some processing
+
       some_arr.size
     end
     ```
