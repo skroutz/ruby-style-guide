@@ -1545,6 +1545,10 @@ patch them.)
 * Be consistent. In an ideal world, be consistent with these guidelines.
 * Use common sense.
 
+## Above all else
+
+Follow your :heart:
+
 # Contributing
 
 Nothing written in this guide is set in stone. It's my desire to work
