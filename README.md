@@ -173,6 +173,35 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
+* Don't use an empty line at the beginning or end of methods, blocks or conditionals.
+
+    ```Ruby
+    # bad
+    def some_method
+
+      do_something
+    end
+
+    # bad
+    def some_method
+      do_something
+
+    end
+
+    # bad
+    def some_method
+      if something > 5
+
+        do_something
+      end
+    end
+
+    # good
+    def some_method
+      do_something
+    end
+    ```
+
 * Align the parameters of a method call if they span over multiple lines.
 
     ```Ruby
