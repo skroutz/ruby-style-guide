@@ -11,6 +11,12 @@ practices. And I do believe that style matters. I also believe that
 such fine fellows, like us Ruby developers, should be quite capable to
 produce this coveted document.
 
+This is the guide we use internally, for our own apps, at
+[Skroutz](http://www.skroutz.gr).
+
+You can also check out the complementary
+[Ruby on Rails 3 Style guide](https://github.com/skroutz/rails-style-guide) and the
+[CSS coding style guide](https://github.com/skroutz/css-style-guide).
 
 # The Ruby Style Guide
 
