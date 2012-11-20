@@ -79,6 +79,12 @@ You can generate a PDF or an HTML copy of this guide using
 > -- Jerry Coffin (on indentation)
 
 * Use `UTF-8` as the source file encoding.
+* Add a source encoding line on the top of every source code file.
+
+    ```Ruby
+    # -*- encoding : utf-8 -*-
+    ```
+
 * Use two **spaces** per indentation level. No hard tabs.
 
     ```Ruby
