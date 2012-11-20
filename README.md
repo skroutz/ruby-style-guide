@@ -1546,9 +1546,12 @@ patch them.)
 * Do not mutate arguments unless that is the purpose of the method.
 * Do not [program defensively](http://www.erlang.se/doc/programming_rules.shtml#HDR11).
 * Avoid more than three levels of block nesting.
+* Avoid variable abbreviations.
+* Avoid long parameter lists.
 * Keep the code simple.
 * Keep the code clean.
 * Don't overdesign or underdesign. The design should be balanced (均衡).
+* Don't write more code than you need.
 * Be consistent. In an ideal world, be consistent with these guidelines.
 * Use common sense.
 
