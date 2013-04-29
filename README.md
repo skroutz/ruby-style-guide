@@ -669,14 +669,14 @@ you if you forget either of the rules above!
     lambda.(1, 2)
     ```
 
-* Use `_` for unused block parameters.
+* Mark unused block parameters by adding a `_` prefix.
 
     ```Ruby
     # bad
     result = hash.map { |k, v| v + 1 }
 
     # good
-    result = hash.map { |_, v| v + 1 }
+    result = hash.map { |_k, v| v + 1 }
     ```
 
 ## Naming
